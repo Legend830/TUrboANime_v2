@@ -18,7 +18,6 @@ FROM base AS runner
 ENV NEXT_TELEMETRY_DISABLED 1
 WORKDIR /app
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 # DB Initialization: Experimental
