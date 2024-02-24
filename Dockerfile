@@ -27,4 +27,4 @@ COPY --from=builder /app/prisma ./prisma
 
 # USER nextjs
 EXPOSE 3000
-CMD npx prisma migrate deploy; npx prisma generate; node server.js
+CMD npx prisma migrate deploy; npx prisma generate
